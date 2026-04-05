@@ -1,0 +1,2 @@
+this.gateway = new InternalPaymentGateway();
+Dòng này đang tự khởi tạo dependency (PaymentGateway) bên trong RechargeService, gọi là hard-code dependency

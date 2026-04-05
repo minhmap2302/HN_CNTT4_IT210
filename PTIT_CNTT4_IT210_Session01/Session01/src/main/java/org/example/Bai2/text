@@ -1,0 +1,2 @@
+Dùng Singleton cho dữ liệu mang tính cá nhân
+dẫn đến chia sẻ dữ liệu giữa các user

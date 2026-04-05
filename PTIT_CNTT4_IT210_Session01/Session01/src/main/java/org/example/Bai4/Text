@@ -1,0 +1,14 @@
+NotificationService (service chính)
+2 dependency:
+EmailSender
+SmsSender
+
+Đây là 2 implementation khác nhau của cùng 1 chức năng gửi thông báo
+Cách 1: Constructor Injection:
+Object không thể tồn tại nếu thiếu dependency
+Tránh null
+Cách 2: Field Injection:
+Spring tự inject
+Không kiểm soát được khi nào inject
+Không test được nếu không chạy Spring
+Ẩn dependency (không rõ constructor cần gì)
