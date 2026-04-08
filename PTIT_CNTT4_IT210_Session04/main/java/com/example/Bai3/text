@@ -1,0 +1,6 @@
+Cách A: /bai3/orders/5 + @PathVariable
+URL: /bai3/orders/5
+5 nằm trong phần path của URL (segment cuối của đường dẫn).
+Cách B: /bai3/orders?id=5 + @RequestParam
+URL: /bai3/orders?id=5
+5 nằm trong query string (tham số sau ?)
