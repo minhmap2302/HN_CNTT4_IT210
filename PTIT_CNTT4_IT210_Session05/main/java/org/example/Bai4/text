@@ -1,0 +1,9 @@
+| Tiêu chí       | (A) Copy Header/Footer                | (B) `layout:decorate` (Layout Dialect) |
+| -------------- | ------------------------------------- | -------------------------------------- |
+| Tái sử dụng    | ❌ Không                               | ✅ Có (rất tốt)                         |
+| Bảo trì        | ❌ Khó (sửa 1 chỗ phải sửa nhiều file) | ✅ Dễ (chỉ sửa layout)                  |
+| Code trùng lặp | ❌ Nhiều                               | ✅ Ít                                   |
+| Độ sạch code   | ❌ Rối                                 | ✅ Gọn, rõ                              |
+| Mở rộng        | ❌ Khó                                 | ✅ Dễ                                   |
+| Hiệu suất dev  | ❌ Chậm                                | ✅ Nhanh                                |
+| Thực tế dự án  | ❌ Không dùng                          | ✅ Chuẩn industry                       |

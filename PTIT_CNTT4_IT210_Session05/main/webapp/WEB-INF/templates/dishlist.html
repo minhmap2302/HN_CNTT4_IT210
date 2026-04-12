@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Dish List</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        table th {
+            text-align: center;
+        }
+
+        table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="table-container" layout:fragment="content">
+    <h3 class="text-center mb-4">Danh sách món ăn</h3>
+
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>ID</th>
+            <th>Tên món</th>
+            <th>Trạng thái</th>
+            <th>Thao Tac</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="item:${dishlist}">
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+
+            <td th:class="${item.status} ? 'text-success font-weight-bold' : 'text-danger font-weight-bold'"
+                th:text="${item.status} ? 'Còn hàng' : 'Hết hàng'">
+            </td>
+            <td>
+                <a class="btn btn-warning btn-sm mr-2"
+                   th:href="@{/edit/{id}(id=${item.id})}" th:text="Edit">
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

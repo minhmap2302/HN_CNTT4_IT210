@@ -1,0 +1,3 @@
+sai đường dẫn resolver.setPrefix("/WEB-INF/views");
+ko dùng views mà phải /WEB-INF/templates/
+sai file .jsp mà html

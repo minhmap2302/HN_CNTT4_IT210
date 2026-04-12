@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dish List</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+</head>
+<body>
+
+<form th:object="${dishEdit}" th:action="@{/edit/{id}(id=*{id})}" method="post">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text"
+               class="form-control"
+               name="name"
+               th:field="*{name}">
+    </div>
+
+    <div class="form-group">
+        <label>Trạng thái</label>
+        <select class="form-control" th:field="*{status}" name="status">
+            <option value="true">Còn hàng</option>
+            <option value="false">Hết hàng</option>
+        </select>
+    </div>
+    <button class="btn btn-warning btn-sm mr-2" type="submit">
+       Edit
+    </button>
+
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
