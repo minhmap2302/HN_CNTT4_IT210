@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<form th:action="@{/tasks}" th:object="${taskItem}" method="post">
+Title: <input th:field="*{title}"/>
+<p th:errors="*{title}"></p>
+
+Deadline: <input type="date" th:field="*{deadline}"/>
+<p th:errors="*{deadline}"></p>
+
+Priority: <input th:field="*{priority}"/>
+<p th:errors="*{priority}"></p>
+
+<button type="submit">Save</button>
+</form>
+</body>
+</html>
